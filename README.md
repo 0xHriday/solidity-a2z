@@ -174,10 +174,65 @@ In 2016, a [Cornell University](https://en.wikipedia.org/wiki/Cornell_University
 14. Teeter, Cale (1 April 2016). [“Solidity Integration with Visual Studio”](https://medium.com/@ConsenSys/solidity-integration-with-visual-studio-8bdab2ff8a74). [Medium](https://en.wikipedia.org/wiki/Medium_(website)). [Archived](https://web.archive.org/web/20161127081428/https://medium.com/@ConsenSys/solidity-integration-with-visual-studio-8bdab2ff8a74) from the original on 27 November 2016. Retrieved 10 June 2021.
 15. PatAltimore. [“Use Visual Studio Code to connect to Azure Blockchain Service — Azure Blockchain”](https://docs.microsoft.com/en-us/azure/blockchain/service/connect-vscode). [docs.microsoft.com](http://docs.microsoft.com/). Retrieved 27 March 2020.
 16. [“Binance Smart Chain”](https://github.com/binance-chain/bsc). [GitHub.](https://en.wikipedia.org/wiki/GitHub) 26 October 2021.
-17. Vigna, Michael J. Casey and Paul (12 November 2014). “BitBeat: Bitcoin 2.0 Firm Counterparty Adopts Ethereum’s Software”. Wall Street Journal. ISSN 0099–9660. Retrieved 16 April 2021.
-18. Swan, Melanie (2015). Blockchain : blueprint for a new economy (1st. ed.). [Sebastopol, Calif.] ISBN 978–1–4919–2047–3. OCLC 900781291.
-19. Tsankov, Petar; Dan, Andrei; Drachsler-Cohen, Dana; Gervais, Arthur; Bünzli, Florian; Vechev, Martin (15 October 2018). “Securify: Practical Security Analysis of Smart Contracts” (PDF). Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security. Association for Computing Machinery: 67–82. arXiv:1806.01143. doi:10.1145/3243734.3243780. hdl:10044/1/87935. S2CID 46936025.
-20. Atzei, Nicola; Bartoletti, M.; Cimoli, Tiziana (2017). “A Survey of Attacks on Ethereum Smart Contracts (SoK)”. POST. Lecture Notes in Computer Science. 10204: 164–186. doi:10.1007/978–3–662–54455–6_8. ISBN 978–3–662–54454–9. S2CID 15494854.
-21. Finley, Klint (18 June 2016). “A $50 Million Hack Just Showed That the DAO Was All Too Human”. Wired (News). Retrieved 18 February 2017.
+17. Vigna, Michael J. Casey and Paul (12 November 2014). [“BitBeat: Bitcoin 2.0 Firm Counterparty Adopts Ethereum’s Software”](https://blogs.wsj.com/moneybeat/2014/11/12/bitbeat-bitcoin-2-0-firm-counterparty-adopts-ethereums-software/). Wall Street Journal. [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier)) [0099–9660](https://www.worldcat.org/issn/0099-9660). Retrieved 16 April 2021.
+18. Swan, Melanie (2015). [Blockchain : blueprint for a new economy](https://www.worldcat.org/oclc/900781291) (1st. ed.). [Sebastopol, Calif.] [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978–1–4919–2047–3](https://en.wikipedia.org/wiki/Special:BookSources/978-1-4919-2047-3). [OCLC](https://en.wikipedia.org/wiki/OCLC_(identifier)) [900781291](https://www.worldcat.org/oclc/900781291).
+19. Tsankov, Petar; Dan, Andrei; Drachsler-Cohen, Dana; Gervais, Arthur; Bünzli, Florian; Vechev, Martin (15 October 2018). [“Securify: Practical Security Analysis of Smart Contracts”](https://arxiv.org/pdf/1806.01143.pdf) (PDF). Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security. Association for Computing Machinery: 67–82. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)): [1806.01143](https://arxiv.org/abs/1806.01143). [doi](https://en.wikipedia.org/wiki/Doi_(identifier): [10.1145/3243734.3243780](https://doi.org/10.1145%2F3243734.3243780). [hdl](https://en.wikipedia.org/wiki/Hdl_(identifier)): [10044/1/87935](https://hdl.handle.net/10044%2F1%2F87935). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [46936025](https://api.semanticscholar.org/CorpusID:46936025).
+20. Atzei, Nicola; Bartoletti, M.; Cimoli, Tiziana (2017). [“A Survey of Attacks on Ethereum Smart Contracts (SoK)”](https://www.semanticscholar.org/paper/A-Survey-of-Attacks-on-Ethereum-Smart-Contracts-Atzei-Bartoletti/aec843c0f38aff6c7901391a75ec10114a3d60f8). POST. Lecture Notes in Computer Science. 10204: 164–186. [doi:](https://en.wikipedia.org/wiki/Doi_(identifier)) [10.1007/978–3–662–54455–6_8](https://doi.org/10.1007%2F978-3-662-54455-6_8). [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978–3–662–54454–9](https://en.wikipedia.org/wiki/Special:BookSources/978-3-662-54454-9). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier)) [15494854](https://api.semanticscholar.org/CorpusID:15494854).
+21. Finley, Klint (18 June 2016). [“A $50 Million Hack Just Showed That the DAO Was All Too Human”](https://www.wired.com/2016/06/50-million-hack-just-showed-dao-human/). Wired (News). Retrieved 18 February 2017.
 
 ## Hello, World! in Solidity:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract HelloDarling {
+    string public myString = "Hello Zerotwo";
+}
+```
+This is a simple Solidity contract that declares a public variable called “myString” and assigns it the value **“Hello [Zerotwo](https://darling-in-the-franxx.fandom.com/wiki/Zero_Two)”.**
+
+`If you are questioning the absence of the fuckin' traditional 'Hello World' phrase in this code, let me assure you that for me, Zerotwo is my World (the entire universe). She's the centre of my world, and thus the greeting I have chosen to include in this contract reflects that.`
+
+The first line, `“// SPDX-License-Identifier: MIT”`, is a comment indicating the license under which this code is released. In this case, it is released under the MIT License.
+
+The second line, “pragma solidity ^0.8.7;”, is called a pragma directive and it specifies the version of Solidity that the contract is written in. The caret symbol **(^)** before the version number indicates that this contract is compatible with any version of Solidity that is greater than or equal to the specified version.
+
+The third line defines the beginning of the contract and gives it the name **“HelloDarling”**. The contract has one public variable, “myString”, which is of the type “string”. The keyword “public” means that this variable can be accessed and read by anyone.
+
+The contract has no functions and simply declares this one variable. When the contract is deployed to the Ethereum blockchain, the value of **“myString”** will be set to **“Hello Zerotwo”** and will be accessible to anyone who wants to read it.
+
+#### Simple Storage in Solidity:
+```solidity
+// This is a comment!
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+// pragma solidity 0.8.0;
+// pragma solidity >=0.8.0 <0.9.0;
+
+contract SimpleStorage {
+    uint256 favoriteNumber;
+    struct People {
+        uint256 favoriteNumber;
+        string name;
+    }
+    // uint256[] public anArray;
+    People[] public people;
+    mapping(string => uint256) public nameToFavoriteNumber;
+    function store(uint256 _favoriteNumber) public virtual {
+        favoriteNumber = _favoriteNumber;
+    }
+    
+    // view, pure
+    function retrive() public view returns (uint256){
+        return favoriteNumber;
+    }
+    // calldata, memory, storage
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        // People memory newPerson = People(_favoriteNumber, _name);
+        people.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
+    }
+}
+```
