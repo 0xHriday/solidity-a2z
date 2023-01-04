@@ -1,5 +1,5 @@
 # solidity-a2z: Join me on a journey to become The Coolest Daniel we can be!
- A journey through the depths of the Solidity Programming Language, these notes are a testament to my exploration and understanding of this powerful tool.
+<i>A journey through the depths of the Solidity Programming Language, these notes are a testament to my exploration and understanding of this powerful tool.</i>
 <br/>
 <p align="center">
 <a href="https://0xhriday.substack.com/" target="_blank">
