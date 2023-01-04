@@ -136,3 +136,48 @@ The `function mint(address receiver, uint amount) public` function allows the co
 The `error InsufficientBalance(uint requested, uint available);` line declares an error called "InsufficientBalance", which will be used to provide information about why the "send" function failed in the event that the caller does not have enough coins to send.
 
 The `function send(address receiver, uint amount) public` function allows any caller to send a specified number of coins to a specified address. The `if (amount > balances[msg.sender])` line checks that the caller has sufficient balance to send the specified number of coins. If the caller does not have sufficient balance, the `revert InsufficientBalance({requested: amount, available: balances[msg.sender]});` line reverts the transaction and returns the "InsufficientBalance" error with the "requested" and "available" arguments specified. If the caller has sufficient balance, the `balances[msg.sender] -= amount; and balances[receiver] += amount;` lines decrement the balance of the sender and increment the balance of the receiver, respectively. Finally, the `emit Sent(msg.sender, receiver, amount);` line triggers the "Sent" event with the "from", "to", and "amount" arguments specified.
+
+## Development platform availability
+-  [Microsoft Visual Studio](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio)
+-  [Microsoft Visual Studio Code](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Code)
+
+## Blockchain platforms
+#### Solidity is available on:
+
+-  [Avalanche C-Chain](https://en.wikipedia.org/wiki/Avalanche_(blockchain_platform))
+-  [Binance Smart Chain](https://en.wikipedia.org/wiki/Binance_Smart_Chain)
+-  [Counterparty](https://en.wikipedia.org/wiki/Counterparty_(technology)) (which runs on [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin))
+-  [Ethereum](https://en.wikipedia.org/wiki/Ethereum)
+-  [Ethereum Classic](https://en.wikipedia.org/wiki/Ethereum_Classic)
+-  [Tron](https://en.wikipedia.org/wiki/TRON_(cryptocurrency))
+-  [Hedera Hashgraph](https://en.wikipedia.org/wiki/Hashgraph)
+
+## Criticism
+Many security properties of smart contracts are inherently difficult to reason about directly, and the [Turing-completeness](https://en.wikipedia.org/wiki/Turing-completeness) of Solidity means that verification of arbitrary properties cannot be [decidably](https://en.wikipedia.org/wiki/Undecidable_problem) automated. Current automated solutions for smart contract security analysis can miss critical violations, produce false positives, and fail to achieve sufficient code coverage on realistic contracts. Solidity has been blamed for the error-prone implementation of Ethereum smart contracts due to its counterintuitive nature, its lack of constructs to deal with blockchain domain-specific aspects, and its lack of centralized documentation of known vulnerabilities.
+
+In 2016, a [Cornell University](https://en.wikipedia.org/wiki/Cornell_University) researcher stated that Solidity was partially to blame for [The DAO](https://en.wikipedia.org/wiki/The_DAO_(organization)) hack that took place that year. He stated: “this was actually not a flaw or exploit in the DAO contract itself: technically the Ethereum Virtual Machine (EVM) was operating as intended, but Solidity was introducing security flaws into contracts that were not only missed by the community, but missed by the designers of the language themselves.”
+
+## References
+1. [“Release 0.4.21”](https://github.com/ethereum/solidity/releases/tag/v0.4.21). 8 March 2018. Retrieved 15 March 2018.
+2. Afshar, Vala (17 July 2017). [“Ethereum Is The Second Most Valuable Digital Currency, Behind Bitcoin”](https://www.huffpost.com/entry/ethereum-is-the-second-most-valuable-digital-currency_b_596bc5c7e4b022bb9372b2b2). HuffPost. Retrieved 10 April 2019.
+3. [“SOFE Berlin: Swift unveils blockchain proof-of-concept”](https://www.finextra.com/newsarticle/29813/sofe-berlin-swift-unveils-blockchain-proof-of-concept). Finextra (News). 24 November 2016. Retrieved 24 November 2016.
+4. Finley, Klint. [“Someone Just Stole $50 Million from the Biggest Crowdfunded Project Ever. (Humans Can’t Be Trusted)”](https://www.wired.com/2016/06/50-million-hack-just-showed-dao-human/). Wired.
+5. [“List of contributors”](https://github.com/ethereum/solidity/graphs/contributors). [GitHub](https://en.wikipedia.org/wiki/GitHub).
+6. Benoit Schweblin. [“StackEdit Viewer”](https://stackedit.io/viewer#!url=https://gist.githubusercontent.com/gavofyork/31b35cd2252a00d0d057/raw/16de06189d2175d2e31b300f1f8531e20c927635/solidity-original). [stackedit.io](http://stackedit.io/).
+7. Nikolic, Ivica; Kolluri, Aashish; Sergey, Ilya; Saxena, Prateek; Hobor, Aquinas (14 March 2018). “Finding The Greedy, Prodigal, and Suicidal Contracts at Scale”. [arXiv](https://en.wikipedia.org/wiki/ArXiv_(identifier)): [1802.06038](https://arxiv.org/abs/1802.06038)  [[cs.CR]](http://cs.cr/). Different source languages compile to the EVM semantics, the predominant of them being Solidity
+8. [“Westpac joins SWIFT’s blockchain proof of concept”](https://www.zdnet.com/article/westpac-joins-swifts-blockchain-proof-of-concept/). ZDNet. Retrieved 13 July 2022.
+9. [“Hyperledger Fabric Tutorial — Create a blockchain app for loyalty points”](https://developer.ibm.com/patterns/loyalty-points-fabric-evm/). IBM Developer. Retrieved 10 April 2019.
+10. [Kapetanios-2008–06–27](https://en.wikipedia.org/wiki/Solidity#CITEREFKapetanios-2008-06-27), p. 309.
+11. ethereum. [“Ethereum Natural Specification Format”](https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format). GitHub.
+12. [“Subcurrency Example from the Solidity documentation”](https://solidity.readthedocs.io/en/v0.5.14/introduction-to-smart-contracts.html#subcurrency-example).
+13. Schneier, Karthikeyan; Schneier, Antoine; Bhargavan, Cedric; Delignat-Lavaud, Anitha; Fournet, Gollamudi; Schneier, Bruce; Rastogi, Nadim; Sibut-Pinote, Aseem; Rastogi1, Thomas; Swamy, Nikhil; Zanella-Beguelin, Santiago (27 August 2016). [“Short Paper: Formal Verification of Smart Contracts”](http://research.microsoft.com/en-us/um/people/nswamy/papers/solidether.pdf) (PDF). Microsoft Research, French Institute for Research in Computer Science and Automation, Harvard University. [Archived](https://web.archive.org/web/20160827092146/http://research.microsoft.com/en-us/um/people/nswamy/papers/solidether.pdf) (PDF) from the original on 27 August 2016.
+14. Teeter, Cale (1 April 2016). [“Solidity Integration with Visual Studio”](https://medium.com/@ConsenSys/solidity-integration-with-visual-studio-8bdab2ff8a74). [Medium](https://en.wikipedia.org/wiki/Medium_(website)). [Archived](https://web.archive.org/web/20161127081428/https://medium.com/@ConsenSys/solidity-integration-with-visual-studio-8bdab2ff8a74) from the original on 27 November 2016. Retrieved 10 June 2021.
+15. PatAltimore. [“Use Visual Studio Code to connect to Azure Blockchain Service — Azure Blockchain”](https://docs.microsoft.com/en-us/azure/blockchain/service/connect-vscode). [docs.microsoft.com](http://docs.microsoft.com/). Retrieved 27 March 2020.
+16. [“Binance Smart Chain”](https://github.com/binance-chain/bsc). [GitHub.](https://en.wikipedia.org/wiki/GitHub) 26 October 2021.
+17. Vigna, Michael J. Casey and Paul (12 November 2014). “BitBeat: Bitcoin 2.0 Firm Counterparty Adopts Ethereum’s Software”. Wall Street Journal. ISSN 0099–9660. Retrieved 16 April 2021.
+18. Swan, Melanie (2015). Blockchain : blueprint for a new economy (1st. ed.). [Sebastopol, Calif.] ISBN 978–1–4919–2047–3. OCLC 900781291.
+19. Tsankov, Petar; Dan, Andrei; Drachsler-Cohen, Dana; Gervais, Arthur; Bünzli, Florian; Vechev, Martin (15 October 2018). “Securify: Practical Security Analysis of Smart Contracts” (PDF). Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security. Association for Computing Machinery: 67–82. arXiv:1806.01143. doi:10.1145/3243734.3243780. hdl:10044/1/87935. S2CID 46936025.
+20. Atzei, Nicola; Bartoletti, M.; Cimoli, Tiziana (2017). “A Survey of Attacks on Ethereum Smart Contracts (SoK)”. POST. Lecture Notes in Computer Science. 10204: 164–186. doi:10.1007/978–3–662–54455–6_8. ISBN 978–3–662–54454–9. S2CID 15494854.
+21. Finley, Klint (18 June 2016). “A $50 Million Hack Just Showed That the DAO Was All Too Human”. Wired (News). Retrieved 18 February 2017.
+
+## Hello, World! in Solidity:
