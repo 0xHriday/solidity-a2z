@@ -18,7 +18,7 @@ Before diving into the specifics of Solidity programming, it’s important to ha
 
 Now, let’s take a closer look at some of the key elements of Solidity programming:
 
--  **Variables** Variables in Solidity are declared with a specific type, such as uint (unsigned integer) or address (an Ethereum address). They can be assigned a value when they are declared, or later on in the contract.
+-  **Variables:** Variables in Solidity are declared with a specific type, such as uint (unsigned integer) or address (an Ethereum address). They can be assigned a value when they are declared, or later on in the contract.
 -  **Functions:** Functions are used to execute specific tasks or calculations within a contract. They can be marked as public, meaning they can be called by external contracts or users, or as private, meaning they can only be accessed within the contract itself.
 -  **Mappings:** Mappings are a data structure that allows for the storage of key-value pairs. They are similar to hash tables or dictionaries in other programming languages.
 -  **Structs:** Structs are custom data types that allow for the creation of complex data structures within a contract. They can be used to group related variables together and can be used as the type for a variable or as a field within a mapping.
